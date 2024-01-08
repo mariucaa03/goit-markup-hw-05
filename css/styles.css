@@ -104,6 +104,12 @@ ol {
   display: inline-block;
   padding: 24px 0;
   text-decoration: none;
+  position: relative;
+  color: #404bbf;
+}
+
+.page-description-link::after {
+  position: absolute;
 }
 
 .page-description:hover,
