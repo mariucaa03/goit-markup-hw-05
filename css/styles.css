@@ -109,13 +109,14 @@ ol {
 }
 
 .page-description-link::after {
+  content: none;
   position: absolute;
   left: 0;
   bottom: -1px;
   height: 4px;
   background-color: #404bbf;
   border-radius: 2px;
-  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-description:hover,
@@ -137,6 +138,7 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.32px;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link {
   padding: 24px 0 24px;
@@ -347,6 +349,7 @@ h2 {
   text-decoration: none;
   display: inline-block;
   margin-bottom: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-foot {
@@ -489,6 +492,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-links-section-four:hover,
@@ -530,6 +534,8 @@ h2 {
   align-items: center;
   justify-content: center;
   color: var(--grey-customer);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer:hover,
@@ -589,6 +595,7 @@ h2 {
   fill: var(--off-white);
 }
 
+/* MODAL */
 .modal-container {
   position: fixed;
   top: 0;
@@ -614,8 +621,8 @@ h2 {
   width: 408px;
   min-height: 584px;
   background: #fcfcfc;
-  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -631,11 +638,11 @@ h2 {
   align-items: center;
   justify-content: center;
   background-color: #e7e9fc;
-  margin: 1px solid rgba(0, 0, 0, 0, 0.1);
+  margin: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   cursor: pointer;
-  transition: background-colour 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-colour 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover,
@@ -646,4 +653,9 @@ h2 {
 
 .modal-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill: #ffffff;
 }
